@@ -2,13 +2,12 @@
   "name": "mangucodes-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://apollo-dev-ops.github.io/mangu-website",
+  "homepage": "https://apollo-dev-ops.github.io/Mangukodes",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "deploy": "gh-pages -d out -t true",
-    "predeploy": "npm run build && npm run export",
+    "predeploy": "npm run build",
     "lint": "eslint ."
   },
   "dependencies": {
