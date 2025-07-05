@@ -1,0 +1,13 @@
+node_modules/
+node_modules
+.next
+.next/ 
+out 
+"node_modules/" 
+".next/" 
+node_modules/
+.env
+*.log
+.DS_Store
+dist/
+.next/node_modules/

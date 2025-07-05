@@ -1,0 +1,29 @@
+@echo off
+echo 🚨 Cleaning up node_modules and removing large files...
+
+REM 1. Delete node_modules folder
+echo Deleting node_modules folder...
+rmdir /S /Q node_modules
+
+REM 2. Ensure node_modules is in .gitignore
+echo Ensuring node_modules/ is in .gitignore...
+echo node_modules/>> .gitignore
+
+REM 3. Remove node_modules from Git tracking
+echo Removing node_modules from Git tracking...
+git rm -r --cached node_modules
+
+REM 4. Stage changes
+echo Staging .gitignore...
+git add .gitignore
+
+REM 5. Commit changes
+echo Committing cleanup...
+git commit -m "Remove node_modules and ignore in future"
+
+REM 6. Push to GitHub
+echo Pushing to GitHub...
+git push --set-upstream origin main
+
+echo ✅ Cleanup and push complete.
+pause
